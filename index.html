@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dazzle Studios</title>
+	<meta name="viewport" content="width-device-width ,initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+</head>
+<body>
+	<nav>
+		<input type="checkbox" id="res-menu">
+		<label for="res-menu">
+			<i class="fa fa-bars" id="sign-one"></i>
+			<i class="fa fa-times" id="sign-two"></i>
+		</label>
+		<div class="nav-logo">
+			<img src="logo.png" max-width="100px" height="60px">
+		</div>
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">About Us</a></li>
+			<li><a href="#">Visit Us</a></li>
+			<li><a href="#">Contact Us</a></li>
+		</ul>
+	</nav>
+
+	<div class="dazzle">DAZZLE</div>
+	<div class="STUDIO">STUDIO</div>
+	<div class="line"></div>
+
+	<div class="tab_mob_logo"></div>
+
+	
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Poppins', sans-serif;
+	background-image: url('main_bg_1.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+nav{
+	position: fixed;
+	z-index: 50;
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid #808080; 
+}
+.nav-logo{
+	position: absolute;
+	width: 200px;
+	top: 11px;
+	left: 30px;
+}
+nav ul{
+	float: right;
+	margin-right: 25px;
+	list-style: none;
+}
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 15px;
+}
+nav ul li a{
+	position: relative;
+	padding: 5px 0;
+	color: #fff;
+	font-size: 18px;
+	text-decoration: none;
+
+}
+
+label #sign-one,
+label #sign-two{
+	font-size: 30px;
+	color: #fff;
+	float: right;
+	line-height: 80px;
+	margin-right: 30px;
+	cursor: pointer;
+	display: none;
+}
+#res-menu{
+	display: none;
+}
+
+
+
+
+.dazzle{
+	position: absolute;
+	top: 330px;
+	right: 40px;
+	color: white;
+	transform: rotate(-90deg);
+	font-size: 100px;
+	font-family: 'Libre Baskerville', serif;
+}
+
+.STUDIO{
+	position: absolute;
+	top: 450.3px;
+	right: 50px;
+	color: white;
+	transform: rotate(-90deg);
+	font-size: 60px;
+	font-family: 'Libre Baskerville', serif;
+	font-weight: 400;
+}
+
+.line{
+	position: absolute;
+	top: 165px;
+	right: 185px;
+	border-right: 1px solid white;
+	height: 170px;
+	width: 0;
+}
+
+.tab_mob_logo{
+	display: none;
+}
+
+
+
+@media (max-width: 1024px){
+	body{
+	font-family: 'Poppins', sans-serif;
+	background-image: url('main_bg_1.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+nav{
+	position: fixed;
+	z-index: 50;
+	width: 100%;
+	height: 80px;
+	border-bottom: 1px solid #808080; 
+}
+.nav-logo{
+	position: absolute;
+	width: 200px;
+	top: 11px;
+	left: 30px;
+}
+nav ul{
+	float: right;
+	margin-right: 25px;
+	list-style: none;
+}
+nav ul li{
+	display: inline-block;
+	line-height: 80px;
+	margin: 0 15px;
+}
+nav ul li a{
+	position: relative;
+	padding: 5px 0;
+	color: #fff;
+	font-size: 18px;
+	text-decoration: none;
+
+}
+
+label #sign-one,
+label #sign-two{
+	font-size: 30px;
+	color: #fff;
+	float: right;
+	line-height: 80px;
+	margin-right: 30px;
+	cursor: pointer;
+	display: none;
+}
+#res-menu{
+	display: none;
+}
+
+
+
+
+.dazzle{
+	position: absolute;
+	top: 280px;
+	right: 36px;
+	color: white;
+	transform: rotate(-90deg);
+	font-size: 90px;
+	font-family: 'Libre Baskerville', serif;
+}
+
+.STUDIO{
+	position: absolute;
+	top: 400.3px;
+	right: 50px;
+	color: white;
+	transform: rotate(-90deg);
+	font-size: 50px;
+	font-family: 'Libre Baskerville', serif;
+	font-weight: 400;
+}
+
+.line{
+	position: absolute;
+	top: 128px;
+	right: 165px;
+	border-right: 1px solid white;
+	height: 160px;
+	width: 0;
+}
+
+.tab_mob_logo{
+	display: none;
+}
+
+}
+
+@media (max-width: 870px){
+	body{
+	font-family: 'Poppins', sans-serif;
+	background-image: url('tab_bg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	}
+	label #sign-one{
+		display: block;
+	}
+	nav ul{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #e92e62;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: .5s;
+		z-index: 20;
+	}
+	nav ul li{
+		display: block;
+		margin: 40px 0;
+		line-height: 30px;
+	}
+	nav ul li a{
+		font-size: 20px;
+	}
+	.nav-logo{
+	position: absolute;
+	left: 10px;
+	}
+	#res-menu:checked ~ ul{
+		left: 0;
+	} 
+	#res-menu:checked ~ label #sign-one{
+		display: none;
+	}
+	#res-menu:checked ~ label #sign-two{
+		display: block;
+	}
+
+
+.dazzle{
+	display: none;
+}
+
+.STUDIO{
+	display: none;
+}
+
+.line{
+	display: none;
+}
+
+.tab_mob_logo{
+	display: block;
+	position: absolute;
+	top: 100px;
+	left: 15%;
+	height: 200px;
+	width: 520px;
+	background: url('HOME_LOGO.png');
+	background-size: cover;
+	background-repeat: no-repeat; 
+}
+
+
+
+}
+
+
+
+@media (max-width: 425px){
+	body{
+	font-family: 'Poppins', sans-serif;
+	background: black;
+	background-image: url('mob_bg2.png');
+	width: 100%;
+	max-height: 771px; 
+	background-size: cover;
+	background-repeat: no-repeat;
+	}
+	label #sign-one{
+		display: block;
+	}
+	nav ul{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #e92e62;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: .5s;
+		z-index: 20;
+	}
+	nav ul li{
+		display: block;
+		margin: 40px 0;
+		line-height: 30px;
+	}
+	nav ul li a{
+		font-size: 20px;
+	}
+	.nav-logo{
+	position: absolute;
+	left: 10px;
+	}
+	#res-menu:checked ~ ul{
+		left: 0;
+	} 
+	#res-menu:checked ~ label #sign-one{
+		display: none;
+	}
+	#res-menu:checked ~ label #sign-two{
+		display: block;
+	}
+	
+.tab_mob_logo{
+	display: block;
+	position: absolute;
+	top: 100px;
+	left: 8%;
+	height: 100px;
+	width: 280px;
+	background: url('HOME_LOGO.png');
+	background-size: cover;
+	background-repeat: no-repeat; 
+
+}
+
+@media (max-width: 320px){
+	body{
+	font-family: 'Poppins', sans-serif;
+	background: black;
+	background-image: url('mobb_bg2.png');
+	width: 100%;
+	max-height: 771px; 
+	background-size: cover;
+	background-repeat: no-repeat;
+	}
+	label #sign-one{
+		display: block;
+	}
+	nav ul{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: #e92e62;
+		top: 80px;
+		left: -100%;
+		text-align: center;
+		transition: .5s;
+		z-index: 20;
+	}
+	nav ul li{
+		display: block;
+		margin: 40px 0;
+		line-height: 30px;
+	}
+	nav ul li a{
+		font-size: 20px;
+	}
+	.nav-logo{
+	position: absolute;
+	left: 10px;
+	}
+	#res-menu:checked ~ ul{
+		left: 0;
+	} 
+	#res-menu:checked ~ label #sign-one{
+		display: none;
+	}
+	#res-menu:checked ~ label #sign-two{
+		display: block;
+	}
+	
+.tab_mob_logo{
+	display: block;
+	position: absolute;
+	top: 100px;
+	left: 8%;
+	height: 100px;
+	width: 280px;
+	background: url('HOME_LOGO.png');
+	background-size: cover;
+	background-repeat: no-repeat; 
+}
+
+}
+
+
+	</style>
+</body>
+
+
+
+</html>
