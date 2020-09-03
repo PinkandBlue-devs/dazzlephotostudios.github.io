@@ -9,6 +9,15 @@
 	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
 </head>
 <body>
+
+
+	<div class="desktop" id="desktop"><img class="desktop_image" src="b.png"></div>
+
+	<div class="tablet" id="tablet"><img class="tab_image" src="bga.png"></div>
+
+	<div class="mobile_img" id="mobile_img"><img class="mob_image" src="mobb_bg1.png"></div>
+
+
 	<nav>
 		<input type="checkbox" id="res-menu">
 		<label for="res-menu">
@@ -16,7 +25,7 @@
 			<i class="fa fa-times" id="sign-two"></i>
 		</label>
 		<div class="nav-logo">
-			<img src="LOGO.png" max-width="100px" height="60px">
+			<img src="dazzle_logo.png" max-width="100px" height="60px">
 		</div>
 		<ul>
 			<li><a href="#">Home</a></li>
@@ -45,9 +54,14 @@
 	<p class="mob_info">Hi, Welcome to <font size="2.5px" color="white">DAZZLE STUDIO'S</font> webpage,<br>
 	we are one of the <font size="2.5px" color="white">BEST PHOTOGRAPHER'S</font> you can hire!</p>
 
-	<div class="Pre_btn"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></div>
-	<div class="Next_btn"><i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></i></div>
+	<div class="Pre_btn_Desktop"><i onclick="nextImage()" class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></div>
+	<div class="Next_btn_Desktop"><i onclick="prewImage()" class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></i></div>
+	
+	<div class="Pre_btn_Tablet"><i onclick="nextImage_tab()" class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></div>
+	<div class="Next_btn_Tablet"><i onclick="prewImage_tab()" class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></i></div>
 
+	<div class="Pre_btn_ph1"><i onclick="nextImage_mob1()" class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></div>
+	<div class="Next_btn_ph1"><i onclick="prewImage_mob1()" class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></i></div>
 	
 <style type="text/css">
 *{
@@ -58,9 +72,10 @@
 
 body{
 	font-family: 'Poppins', sans-serif;
-	background-image: url('main_bg_1.png');
-	background-size: cover;
-	background-repeat: no-repeat;
+}
+
+.mobile_img{
+	display: none;
 }
 nav{
 	position: fixed;
@@ -202,13 +217,16 @@ display: none;
 }
 
 
-.Pre_btn{
+.Pre_btn_Desktop{
 	position: absolute;
 	top: 560px;
 	left: 130px;
 }
 
+
+
 .fa-arrow-circle-o-left{
+
 	height: 62px;
 	width: 62px;
 	font-weight: 10;
@@ -217,11 +235,12 @@ display: none;
 }
 
 
-.Next_btn{
+.Next_btn_Desktop{
 	position: absolute;
 	top: 560px;
 	left: 192px;
 }
+
 
 .fa-arrow-circle-o-right{
 	height: 62px;
@@ -231,7 +250,46 @@ display: none;
 	color: #fff;
 }
 
+.Pre_btn_Tablet{
+	display: none;
+}
+.Next_btn_Tablet{
+	display: none;
+}
+	.mobile_img{
+		display: none;
+	}
 
+.Pre_btn_ph1{
+		display: none;
+	}
+
+
+	.Next_btn_ph1{
+		display: none;
+	}
+
+	.desktop{
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	}
+
+
+.desktop_image{
+	display: block;
+	height: 871px;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: -99; 
+}
+
+
+.tablet{
+	display: none;
+}
 
 
 
@@ -247,9 +305,6 @@ display: none;
 @media (max-width: 1024px){
 	body{
 	font-family: 'Poppins', sans-serif;
-	background-image: url('main_bg_1.png');
-	background-size: cover;
-	background-repeat: no-repeat;
 	}
 	nav{
 		position: fixed;
@@ -384,6 +439,36 @@ display: none;
 		text-align: center;
 	}
 
+
+
+	.desktop-image{
+		display: none;
+	}
+
+	.laptop{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 871px;
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: -99; 
+	}
+
+	.tablet{
+		display: none;
+	}
+	.phone1{
+		display: none;
+	}
+	.phone2{
+		display: none;
+	}
+
+
+
 }
 
 
@@ -391,9 +476,7 @@ display: none;
 @media (max-width: 870px){
 	body{
 	font-family: 'Poppins', sans-serif;
-	background-image: url('tab_bg.png');
-	background-size: cover;
-	background-repeat: no-repeat;
+
 	}
 	label #sign-one{
 		display: block;
@@ -465,6 +548,53 @@ display: none;
 		text-align: center;
 	}
 
+	.Pre_btn_Desktop{
+		display: none;
+	}
+	.Next_btn_Desktop{
+		display: none;
+	}
+
+	.Pre_btn_Tablet{
+		display: block;
+		position: absolute;
+		top: 550px;
+		left: 40px;
+	}
+
+	.Next_btn_Tablet{
+		display: block;
+		position: absolute;
+		top: 550px;
+		left: 100px;
+	}
+
+
+
+	.desktop-image{
+		display: none;
+	}
+
+	.laptop{
+		display: none;
+	}
+
+	.tablet{
+		display: block;
+	}
+
+	.tab_image{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 871px;
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: -90; 
+	}
+
 
 }
 
@@ -473,12 +603,6 @@ display: none;
 @media (max-width: 425px){
 	body{
 	font-family: 'Poppins', sans-serif;
-	background: black;
-	background-image: url('mob_bg2.png');
-	width: 100%;
-	max-height: 771px; 
-	background-size: cover;
-	background-repeat: no-repeat;
 	}
 	label #sign-one{
 		display: block;
@@ -558,11 +682,51 @@ display: none;
 		text-align: center;
 	}
 
-	.Pre_btn{
+
+	.Pre_btn_Tablet{
+		display: none;
+	}
+
+
+	.Next_btn_Tablet{
+		display: none;
+	}
+
+	.desktop{
+		display: none;
+	}
+
+	.tablet{
+		display: none;
+	}
+
+	.mobile_img{
+		display: block;
+		
+
+	}
+
+	.mob_image{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 640px;
+		width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		z-index: -99;
+	}
+
+
+	.Pre_btn_ph1{
+		display: block;
 		position: absolute;
 		top: 560px;
 		left: 60px;
 	}
+
+
 
 	.fa-arrow-circle-o-left{
 		height: 62px;
@@ -572,12 +736,14 @@ display: none;
 		color: #fff;
 	}
 
-
-	.Next_btn{
+	.Next_btn_ph1{
+		display: block;
 		position: absolute;
 		top: 560px;
 		left: 122px;
 	}
+	
+
 
 	.fa-arrow-circle-o-right{
 		height: 62px;
@@ -605,12 +771,6 @@ display: none;
 @media (max-width: 320px){
 	body{
 	font-family: 'Poppins', sans-serif;
-	background: black;
-	background-image: url('mobb_bg2.png');
-	width: 100%;
-	max-height: 771px; 
-	background-size: cover;
-	background-repeat: no-repeat;
 	}
 	label #sign-one{
 		display: block;
@@ -706,9 +866,77 @@ display: none;
 }
 
 
-	</style>
+</style>
+<script type="text/javascript">
+	 	var slider_content = document.getElementById('desktop');
+		var image = ['a', 'b'];
+		var i = image.length;
+		//next
+		function nextImage(){
+			if (i > image.length){
+			i = i+1;
+			}else{
+				i = 1;
+			}
+		slider_content.innerHTML = "<img class="+"desktop_image"+" src="+image[i-1]+".png>";
+	}
+	//prew image
+	function prewImage(){
+		if (i > image.length+1 && i>1){
+			i = i-1;
+		}else{
+			i = image.length;
+		}
+		slider_content.innerHTML = "<img class="+"desktop_image"+" src="+image[i-1]+".png>";
+	}
+</script>
+
+<script type="text/javascript">
+	 	var tab_slider_content = document.getElementById('tablet');
+		var tabimage = ['bga', 'bgb'];
+		var i = tabimage.length;
+		//next
+		function nextImage_tab(){
+			if (i > tabimage.length){
+			i = i+1;
+			}else{
+				i = 1;
+			}
+		tab_slider_content.innerHTML = "<img class="+"tab_image"+" src="+tabimage[i-1]+".png>";
+	}
+	//prew image
+	function prewImage_tab(){
+		if (i > tabimage.length+1 && i>1){
+			i = i-1;
+		}else{
+			i = tabimage.length;
+		}
+		tab_slider_content.innerHTML = "<img class="+"tab_image"+" src="+tabimage[i-1]+".png>";
+	}
+</script>
+
+<script type="text/javascript">
+	 	var mob_slider_content = document.getElementById('mobile_img');
+		var mobimage = ['mobb_bg1', 'mobb_bg2'];
+		var i = mobimage.length;
+		//next
+		function nextImage_mob1(){
+			if (i > mobimage.length){
+			i = i+1;
+			}else{
+				i = 1;
+			}
+		mob_slider_content.innerHTML = "<img class="+"mob_image"+" src="+mobimage[i-1]+".png>";
+	}
+	//prew image
+	function prewImage_mob1(){
+		if (i > mobimage.length+1 && i>1){
+			i = i-1;
+		}else{
+			i = mobimage.length;
+		}
+		mob_slider_content.innerHTML = "<img class="+"mob_image"+" src="+mobimage[i-1]+".png>";
+	}
+</script>
 </body>
-
-
-
 </html>
