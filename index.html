@@ -1,942 +1,368 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>Dazzle Studio</title>
 	<meta charset="utf-8">
-	<title>Dazzle Studios</title>
-	<meta name="viewport" content="width-device-width ,initial-scale=1.0">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+	<header>
+		<div class="logo"><img src="dazzle_logo.png" height="60px" width="100px"></div><div class="logo"><img src="pinkandblue.png" height="60px" width="115px"></div>
+	</header>
+	<section>
+		<img src="curve.png" class="wave">
+		<div class="contentBx">
 
-
-	<div class="desktop" id="desktop"><img class="desktop_image" src="b.png"></div>
-
-	<div class="tablet" id="tablet"><img class="tab_image" src="bga.png"></div>
-
-	<div class="mobile_img" id="mobile_img"><img class="mob_image" src="mobb_bg1.png"></div>
-
-
-	<nav>
-		<input type="checkbox" id="res-menu">
-		<label for="res-menu">
-			<i class="fa fa-bars" id="sign-one"></i>
-			<i class="fa fa-times" id="sign-two"></i>
-		</label>
-		<div class="nav-logo">
-			<img src="dazzle_logo.png" max-width="100px" height="60px">
+			<h2>Coming Soon</h2>
+			<p>Developers are working day and night to build dream website for DAZZLE STUDIO, hope you will love the work, website coming soon!
+			</p>
+			<div class="countdown">
+				<div class="time"><div id="day">></div><span>Days</span></div>
+				<div class="time"><div id="hour"></div><span>Hours</span></div>
+				<div class="time"><div id="minute"></div><span>Minutes</span></div>
+				<div class="time"><div id="second"></div><span>Seconds</span></div>
+			</div>
+			<a href="#" onclick="toggle()">Notify Me!</a>
 		</div>
-		<ul>
-			<li><a href="#">Home</a></li>
-			<li><a href="#">About Us</a></li>
-			<li><a href="#">Visit Us</a></li>
-			<li><a href="#">Contact Us</a></li>
-		</ul>
-	</nav>
+		<div class="imgBx">
+			<img src="man.png">
+		</div>
 
-	<div class="dazzle">DAZZLE</div>
-	<div class="STUDIO">STUDIO</div>
-	<div class="line"></div>
-
-	<div class="tab_mob_logo"></div>
-
-	<div class="line1"></div>
-	<div class="line2"></div>
-	<div class="number2">02</div>
-	<div class="line3"></div>
-	<div class="line4"></div>
-
-	<div class="home_info">
-		<p>Hi, Welcome to <font size="5px" color="white">DAZZLE STUDIO'S</font> webpage,<br>
-		we are one of the <font size="5px" color="white">BEST PHOTOGRAPHER'S</font> you can hire!</p>
+		<div class="sci">
+			<li><a href="#"><img src="facebook.png"></a></li>
+			<li><a href="#"><img src="instagram.png"></a></li>
+		</div>
+	</section>
+	<div class="newsletter">
+		<h2>Stay Tuned</h2>
+		<p>Get Notified at launch</p>
+		<div class="inputBox">
+			<form>
+				<input type="email" name="" required="" placeholder="Enter Email Address">
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+		<img src="close.png" class="close" onclick="toggle()">
 	</div>
-	<p class="mob_info">Hi, Welcome to <font size="2.5px" color="white">DAZZLE STUDIO'S</font> webpage,<br>
-	we are one of the <font size="2.5px" color="white">BEST PHOTOGRAPHER'S</font> you can hire!</p>
+</body>
 
-	<div class="Pre_btn_Desktop"><i onclick="nextImage()" class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></div>
-	<div class="Next_btn_Desktop"><i onclick="prewImage()" class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></i></div>
-	
-	<div class="Pre_btn_Tablet"><i onclick="nextImage_tab()" class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></div>
-	<div class="Next_btn_Tablet"><i onclick="prewImage_tab()" class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></i></div>
-
-	<div class="Pre_btn_ph1"><i onclick="nextImage_mob1()" class="fa fa-arrow-circle-o-left" aria-hidden="true"></i></div>
-	<div class="Next_btn_ph1"><i onclick="prewImage_mob1()" class="fa fa-arrow-circle-o-right" aria-hidden="true"></i></i></div>
-	
 <style type="text/css">
-*{
-	margin: 0;
-	padding: 0;
-	overflow-y: hidden;
-}
-
-body{
-	font-family: 'Poppins', sans-serif;
-}
-
-.mobile_img{
-	display: none;
-}
-nav{
-	position: fixed;
-	z-index: 50;
-	width: 100%;
-	height: 80px;
-	border-bottom: 1px solid #808080; 
-}
-.nav-logo{
-	position: absolute;
-	width: 200px;
-	top: 11px;
-	left: 30px;
-}
-nav ul{
-	float: right;
-	margin-right: 25px;
-	list-style: none;
-}
-nav ul li{
-	display: inline-block;
-	line-height: 80px;
-	margin: 0 15px;
-}
-nav ul li a{
-	position: relative;
-	padding: 5px 0;
-	color: #fff;
-	font-size: 18px;
-	text-decoration: none;
-
-}
-
-label #sign-one,
-label #sign-two{
-	font-size: 30px;
-	color: #fff;
-	float: right;
-	line-height: 80px;
-	margin-right: 30px;
-	cursor: pointer;
-	display: none;
-}
-#res-menu{
-	display: none;
-}
-
-
-
-
-.dazzle{
-	position: absolute;
-	top: 330px;
-	right: 40px;
-	color: white;
-	transform: rotate(-90deg);
-	font-size: 100px;
-	font-family: 'Libre Baskerville', serif;
-}
-
-.STUDIO{
-	position: absolute;
-	top: 450.3px;
-	right: 50px;
-	color: white;
-	transform: rotate(-90deg);
-	font-size: 60px;
-	font-family: 'Libre Baskerville', serif;
-	font-weight: 400;
-}
-
-.line{
-	position: absolute;
-	top: 165px;
-	right: 185px;
-	border-right: 1px solid white;
-	height: 170px;
-	width: 0;
-}
-
-.tab_mob_logo{
-	display: none;
-}
-
-.line1{
-	position: absolute;
-	top: 160px;
-	left: 0px;
-	height: 0px;
-	width: 50px;
-	border-bottom: 1px solid #808080;
-}
-.line2{
-	position: absolute;
-	top: 180px;
-	left: 0px;
-	height: 0px;
-	width: 60px;
-	border-bottom: 1px solid #808080;
-}
-.number2{
-	position: absolute;
-	font-family: 'Poppins', sans-serif;
-	color: #808080;
-	top: 168px;
-	left: 70px;
-}
-.line3{
-	position: absolute;
-	top: 200px;
-	left: 0px;
-	height: 0px;
-	width: 50px;
-	border-bottom: 1px solid #808080;
-}
-.line4{
-	position: absolute;
-	top: 220px;
-	left: 0px;
-	height: 0px;
-	width: 50px;
-	border-bottom: 1px solid #808080;
-}
-
-.home_info p{
-	position: absolute;
-	top: 470px;
-	left: 20px;
-	font-family: 'Poppins', sans-serif;
-	color: #808080;
-	font-size: 14px;
-	text-align: center;
-}
-
-.mob_info{
-display: none;
-
-
-}
-
-
-.Pre_btn_Desktop{
-	position: absolute;
-	top: 560px;
-	left: 130px;
-}
-
-
-
-.fa-arrow-circle-o-left{
-
-	height: 62px;
-	width: 62px;
-	font-weight: 10;
-	font-size: 60px;
-	color: #fff;
-}
-
-
-.Next_btn_Desktop{
-	position: absolute;
-	top: 560px;
-	left: 192px;
-}
-
-
-.fa-arrow-circle-o-right{
-	height: 62px;
-	width: 62px;
-	font-weight: 10;
-	font-size: 60px;
-	color: #fff;
-}
-
-.Pre_btn_Tablet{
-	display: none;
-}
-.Next_btn_Tablet{
-	display: none;
-}
-	.mobile_img{
-		display: none;
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Poppins', sans-serif;
+		font-weight: 500;
 	}
 
-.Pre_btn_ph1{
-		display: none;
-	}
-
-
-	.Next_btn_ph1{
-		display: none;
-	}
-
-	.desktop{
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	}
-
-
-.desktop_image{
-	display: block;
-	height: 871px;
-	width: 100%;
-	background-size: cover;
-	background-repeat: no-repeat;
-	z-index: -99; 
-}
-
-
-.tablet{
-	display: none;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 1024px){
 	body{
-	font-family: 'Poppins', sans-serif;
+		background: #312747;
 	}
-	nav{
-		position: fixed;
-		z-index: 50;
-		width: 100%;
-		height: 80px;
-		border-bottom: 1px solid #808080; 
-	}
-	.nav-logo{
+
+
+	header{
 		position: absolute;
-		width: 200px;
-		top: 11px;
-		left: 30px;
+		top: 0;
+		left: 0;
+		width: 100%;
+		padding: 40px 100px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		z-index: 99999999;
 	}
-	nav ul{
-		float: right;
-		margin-right: 25px;
+
+	header .logo{
+		position: relative;
+
+	}
+
+
+
+	section{
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 100vh;
+		padding: 0 100px;
+	}
+
+	section .contentBx{
+		position: relative;
+		max-width: 600px;
+		z-index: 1000;
+	}
+
+	section .contentBx h2{
+		font-size: 60px;
+		color: #fff;
+		text-transform: uppercase;
+	}
+
+	section .contentBx p{
+		font-size: 18px;
+		color: #fff;
+	}
+
+	section .contentBx .countdown{
+		display: flex;
+		margin: 20px 0;
+	}
+
+	section .contentBx .countdown .time{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		background: #fff;
+		margin-right: 20px;
+		font-size: 48px;
+		min-width: 110px;
+		font-weight: 700;
+		padding: 10px 5px 15px;
+		border-radius: 4px;
+		color: #ff0083;
+	}
+
+	section .contentBx .countdown .time span{
+		margin-top: -10px;
+		font-size: 20px;
+		font-weight: 500;
+		color: #312747;
+	}
+
+	section .contentBx a{
+		position: relative;
+		margin-top: -10px;
+		display: inline-block;
+		background: #ff0083;
+		color: #fff;
+		font-size: 20px;
+		letter-spacing: 2px;
+		padding: 15px 35px;
+		border-radius: 40px;
+		text-decoration: none;
+	}	
+
+	section .imgBx img{
+		position: relative;
+		max-width: 500px;
+		width: 100%;
+		margin-top: 100px;
+		z-index: 2;
+	}
+
+	.wave{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 1;
+		pointer-events: none;
+	}
+
+	section .sci{
+		position: absolute;
+		bottom: 40px;
+		left: 100px;
+		z-index: 1000;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		filter: invert(1);
+	}
+
+	section .sci li{
 		list-style: none;
 	}
-	nav ul li{
-		display: inline-block;
-		line-height: 80px;
-		margin: 0 15px;
+
+	section .sci li a{
+		display: block;
+		margin-right: 20px;
+		transform: scale(0.8);
 	}
-	nav ul li a{
-		position: relative;
-		padding: 5px 0;
-		color: #fff;
+
+
+
+	.newsletter{
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 600px;
+		padding: 60px;
+		background: #fff;
+		z-index: 100000;
+		box-shadow: 0 0 0 100vh rgba(49, 39, 71,0.95);
+		visibility: hidden;
+		opacity: 0;
+		transition: 0.5s;
+	}
+
+
+	.newsletter.active{
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.newsletter h2{
+		font-size: 48px;
+		color: #312747;
+		font-weight: 600;
+	}
+
+	.newsletter p{
+		font-size: 20px;
+		color: #312747;
+	}
+
+	.newsletter .inputBox input{
+		padding: 10px;
+		outline: none;
+		width: 300px;
 		font-size: 18px;
-		text-decoration: none;
-
+		border: 1px solid #999;
 	}
 
-	label #sign-one,
-	label #sign-two{
-		font-size: 30px;
+
+
+	.newsletter .inputBox input[type = "submit"]{
+		padding: 10px;
+		outline: none;
+		width: 140px;
 		color: #fff;
-		float: right;
-		line-height: 80px;
-		margin-right: 30px;
+		background: #ff0083;
+		border: 1px solid #ff0083;
+		letter-spacing: 2px;
 		cursor: pointer;
-		display: none;
-	}
-	#res-menu{
-		display: none;
 	}
 
 
-
-
-	.dazzle{
+	.newsletter .close{
 		position: absolute;
-		top: 280px;
-		right: 36px;
-		color: white;
-		transform: rotate(-90deg);
-		font-size: 90px;
-		font-family: 'Libre Baskerville', serif;
+		top: 20px;
+		right: 20px;
+		width: 40px;
+		height: 40px;
+		cursor: pointer;
+	}
+
+
+
+	@media(max-width: 991px){
+		section{
+			flex-direction: column;
+			padding-top: 150px;
+			height: auto;
+		}
+		section .contentBx{
+			max-width: 100%;
+		}
+		section .imgBx img{
+			margin-top: 0;
+
+		}
+	}
+
+	@media(max-width: 767px){
+		header {
+			padding: 20px 40px;
+
+		}
+		section{
+			flex-direction: column;
+			padding: 150px 20px 50px;
+			height: auto;
+		}
+
+		section .contentBx h2{
+			font-size: 40px;
+		}
+		section .contentBx p{
+			font-size: 16px;
+			width: 320px;
+		}
+
+		section .contentBx .countdown .time{
+			font-size: 30px;
+			min-width: 70px;
+			margin-right: 5px;
+		}
+
+		section .contentBx .countdown .time span{
+			font-size: 14px;
+		}
+
+		section .contentBx a{
+			position: relative; 
+			margin-top: 10px;
+			display: inline-block;
+			background:  #fff;
+			color: #ff0083;
+			font-size: 16px;
+			letter-spacing: 2px;
+			padding: 10px 25px;
+			text-decoration: none;
+			border-radius: 40px;
+
+		}
+
+		section .sci{
+			left: 50px;
+			bottom: 20px;
+		}
+
+		.newsletter{
+			width: 90%;
+			padding: 30px;
+		}
+
+		.newsletter .inputBox input{
+			margin-top: 10px;
+			width: 100%;
+		}
 	}
-
-	.STUDIO{
-		position: absolute;
-		top: 400.3px;
-		right: 50px;
-		color: white;
-		transform: rotate(-90deg);
-		font-size: 50px;
-		font-family: 'Libre Baskerville', serif;
-		font-weight: 400;
-	}
-
-	.line{
-		position: absolute;
-		top: 128px;
-		right: 165px;
-		border-right: 1px solid white;
-		height: 160px;
-		width: 0;
-	}
-
-	.tab_mob_logo{
-		display: none;
-	}
-
-	.line1{
-		position: absolute;
-		top: 160px;
-		left: 0px;
-		height: 0px;
-		width: 50px;
-		border-bottom: 1px solid #808080;
-	}
-	.line2{
-		position: absolute;
-		top: 180px;
-		left: 0px;
-		height: 0px;
-		width: 60px;
-		border-bottom: 1px solid #808080;
-	}
-	.number2{
-		position: absolute;
-		font-family: 'Poppins', sans-serif;
-		color: #808080;
-		top: 168px;
-		left: 70px;
-	}
-	.line3{
-		position: absolute;
-		top: 200px;
-		left: 0px;
-		height: 0px;
-		width: 50px;
-		border-bottom: 1px solid #808080;
-	}
-	.line4{
-		position: absolute;
-		top: 220px;
-		left: 0px;
-		height: 0px;
-		width: 50px;
-		border-bottom: 1px solid #808080;
-	}
-
-	.home_info p{
-		position: absolute;
-		top: 440px;
-		left: 20px;
-		font-family: 'Poppins', sans-serif;
-		color: #808080;
-		font-size: 14px;
-		text-align: center;
-	}
-
-
-
-	.desktop-image{
-		display: none;
-	}
-
-	.laptop{
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 871px;
-		width: 100%;
-		background-size: cover;
-		background-repeat: no-repeat;
-		z-index: -99; 
-	}
-
-	.tablet{
-		display: none;
-	}
-	.phone1{
-		display: none;
-	}
-	.phone2{
-		display: none;
-	}
-
-
-
-}
-
-
-
-@media (max-width: 870px){
-	body{
-	font-family: 'Poppins', sans-serif;
-
-	}
-	label #sign-one{
-		display: block;
-	}
-	nav ul{
-		position: fixed;
-		width: 100%;
-		height: 100vh;
-		background: #e92e62;
-		top: 80px;
-		left: -100%;
-		text-align: center;
-		transition: .5s;
-		z-index: 20;
-	}
-	nav ul li{
-		display: block;
-		margin: 40px 0;
-		line-height: 30px;
-	}
-	nav ul li a{
-		font-size: 20px;
-	}
-	.nav-logo{
-	position: absolute;
-	left: 10px;
-	}
-	#res-menu:checked ~ ul{
-		left: 0;
-	} 
-	#res-menu:checked ~ label #sign-one{
-		display: none;
-	}
-	#res-menu:checked ~ label #sign-two{
-		display: block;
-	}
-
-
-	.dazzle{
-		display: none;
-	}
-
-	.STUDIO{
-		display: none;
-	}
-
-	.line{
-		display: none;
-	}
-
-	.tab_mob_logo{
-		display: block;
-		position: absolute;
-		top: 100px;
-		left: 15%;
-		height: 200px;
-		width: 520px;
-		background: url('HOME_LOGO.png');
-		background-size: cover;
-		background-repeat: no-repeat; 
-	}
-	.mob_info{
-		display: none;
-		position: absolute;
-		top: 550px;
-		left: 10%;
-		font-size: 11.5px;
-		color: #808080;
-		text-align: center;
-	}
-
-	.Pre_btn_Desktop{
-		display: none;
-	}
-	.Next_btn_Desktop{
-		display: none;
-	}
-
-	.Pre_btn_Tablet{
-		display: block;
-		position: absolute;
-		top: 550px;
-		left: 40px;
-	}
-
-	.Next_btn_Tablet{
-		display: block;
-		position: absolute;
-		top: 550px;
-		left: 100px;
-	}
-
-
-
-	.desktop-image{
-		display: none;
-	}
-
-	.laptop{
-		display: none;
-	}
-
-	.tablet{
-		display: block;
-	}
-
-	.tab_image{
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 871px;
-		width: 100%;
-		background-size: cover;
-		background-repeat: no-repeat;
-		z-index: -90; 
-	}
-
-
-}
-
-
-
-@media (max-width: 425px){
-	body{
-	font-family: 'Poppins', sans-serif;
-	}
-	label #sign-one{
-		display: block;
-	}
-	nav ul{
-		position: fixed;
-		width: 100%;
-		height: 100vh;
-		background: #e92e62;
-		top: 80px;
-		left: -100%;
-		text-align: center;
-		transition: .5s;
-		z-index: 20;
-	}
-	nav ul li{
-		display: block;
-		margin: 40px 0;
-		line-height: 30px;
-	}
-	nav ul li a{
-		font-size: 20px;
-	}
-	.nav-logo{
-	position: absolute;
-	left: 10px;
-	}
-	#res-menu:checked ~ ul{
-		left: 0;
-	} 
-	#res-menu:checked ~ label #sign-one{
-		display: none;
-	}
-	#res-menu:checked ~ label #sign-two{
-		display: block;
-	}
-	
-	.tab_mob_logo{
-		display: block;
-		position: absolute;
-		top: 100px;
-		left: 11%;
-		height: 100px;
-		width: 280px;
-		background: url('HOME_LOGO.png');
-		background-size: cover;
-		background-repeat: no-repeat; 
-
-	}
-	.line1{
-		display: none;
-	}
-	.line2{
-		display: none;
-	}
-	.number2{
-		display: none;
-	}
-	.line3{
-		display: none;
-	}
-	.line4{
-		display: none;
-	}
-
-	.home_info p{
-		display: none;
-	}
-
-	.mob_info{
-		display: block;
-		position: absolute;
-		top: 500px;
-		left: 10%;
-		font-size: 11.5px;
-		color: #808080;
-		text-align: center;
-	}
-
-
-	.Pre_btn_Tablet{
-		display: none;
-	}
-
-
-	.Next_btn_Tablet{
-		display: none;
-	}
-
-	.desktop{
-		display: none;
-	}
-
-	.tablet{
-		display: none;
-	}
-
-	.mobile_img{
-		display: block;
-		
-
-	}
-
-	.mob_image{
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 640px;
-		width: 100%;
-		background-size: cover;
-		background-repeat: no-repeat;
-		z-index: -99;
-	}
-
-
-	.Pre_btn_ph1{
-		display: block;
-		position: absolute;
-		top: 560px;
-		left: 60px;
-	}
-
-
-
-	.fa-arrow-circle-o-left{
-		height: 62px;
-		width: 62px;
-		font-weight: 10;
-		font-size: 60px;
-		color: #fff;
-	}
-
-	.Next_btn_ph1{
-		display: block;
-		position: absolute;
-		top: 560px;
-		left: 122px;
-	}
-	
-
-
-	.fa-arrow-circle-o-right{
-		height: 62px;
-		width: 62px;
-		font-weight: 10;
-		font-size: 60px;
-		color: #fff;
-	}
-
-}
-
-
-@media (max-height: 738px, max-width: 420px){
-	.mob_info{
-		display: block;
-		position: absolute;
-		top: 550px;
-		left: 10%;
-		font-size: 11.5px;
-		color: #808080;
-		text-align: center;
-	}
-}
-
-@media (max-width: 320px){
-	body{
-	font-family: 'Poppins', sans-serif;
-	}
-	label #sign-one{
-		display: block;
-	}
-	nav ul{
-		position: fixed;
-		width: 100%;
-		height: 100vh;
-		background: #e92e62;
-		top: 80px;
-		left: -100%;
-		text-align: center;
-		transition: .5s;
-		z-index: 20;
-	}
-	nav ul li{
-		display: block;
-		margin: 40px 0;
-		line-height: 30px;
-	}
-	nav ul li a{
-		font-size: 20px;
-	}
-	.nav-logo{
-	position: absolute;
-	left: 10px;
-	}
-	#res-menu:checked ~ ul{
-		left: 0;
-	} 
-	#res-menu:checked ~ label #sign-one{
-		display: none;
-	}
-	#res-menu:checked ~ label #sign-two{
-		display: block;
-	}
-	
-	.tab_mob_logo{
-		display: block;
-		position: absolute;
-		top: 100px;
-		left: 8%;
-		height: 100px;
-		width: 280px;
-		background: url('HOME_LOGO.png');
-		background-size: cover;
-		background-repeat: no-repeat; 
-	}
-
-	.home_info p{
-		display: none;
-	}
-
-	.mob_info{
-		display: block;
-		position: absolute;
-		top: 460px;
-		left: 9%;
-		font-size: 8px;
-		color: #808080;
-		text-align: center;
-	}
-
-	.Pre_btn{
-		position: absolute;
-		top: 500px;
-		left: 60px;
-	}
-
-	.fa-arrow-circle-o-left{
-		height: 55px;
-		width: 55px;
-		font-weight: 10;
-		font-size: 50px;
-		color: #fff;
-	}
-
-
-	.Next_btn{
-		position: absolute;
-		top: 500px;
-		left: 115px;
-	}
-
-	.fa-arrow-circle-o-right{
-		height: 55px;
-		width: 55px;
-		font-weight: 10;
-		font-size: 50px;
-		color: #fff;
-	}
-
-}
 
 
 </style>
 <script type="text/javascript">
-	 	var slider_content = document.getElementById('desktop');
-		var image = ['a', 'b'];
-		var i = image.length;
-		//next
-		function nextImage(){
-			if (i > image.length){
-			i = i+1;
-			}else{
-				i = 1;
-			}
-		slider_content.innerHTML = "<img class="+"desktop_image"+" src="+image[i-1]+".png>";
-	}
-	//prew image
-	function prewImage(){
-		if (i > image.length+1 && i>1){
-			i = i-1;
-		}else{
-			i = image.length;
-		}
-		slider_content.innerHTML = "<img class="+"desktop_image"+" src="+image[i-1]+".png>";
-	}
-</script>
 
-<script type="text/javascript">
-	 	var tab_slider_content = document.getElementById('tablet');
-		var tabimage = ['bga', 'bgb'];
-		var i = tabimage.length;
-		//next
-		function nextImage_tab(){
-			if (i > tabimage.length){
-			i = i+1;
-			}else{
-				i = 1;
-			}
-		tab_slider_content.innerHTML = "<img class="+"tab_image"+" src="+tabimage[i-1]+".png>";
-	}
-	//prew image
-	function prewImage_tab(){
-		if (i > tabimage.length+1 && i>1){
-			i = i-1;
-		}else{
-			i = tabimage.length;
-		}
-		tab_slider_content.innerHTML = "<img class="+"tab_image"+" src="+tabimage[i-1]+".png>";
-	}
-</script>
 
-<script type="text/javascript">
-	 	var mob_slider_content = document.getElementById('mobile_img');
-		var mobimage = ['mobb_bg1', 'mobb_bg2'];
-		var i = mobimage.length;
-		//next
-		function nextImage_mob1(){
-			if (i > mobimage.length){
-			i = i+1;
-			}else{
-				i = 1;
+
+	function toggle(){
+		var newsletter = document.querySelector('.newsletter');
+		newsletter.classList.toggle('active')
+	}
+
+
+
+
+
+	var countDate = new Date('Sept 23, 2020 00:00:00').getTime();
+
+	function LaunchDate(){
+		var now = new Date().getTime();
+			gap = countDate - now;
+
+			var second = 1000;
+			var minute = second * 60;
+			var hour = minute * 60;
+			var day = hour * 24;
+
+			var d = Math.floor(gap / (day));
+			var h = Math.floor((gap % (day)) / (hour));
+			var m = Math.floor((gap % (hour)) / (minute));
+			var s = Math.floor((gap % (minute)) / second);
+
+			document.getElementById('day').innerText = d;
+			document.getElementById('hour').innerText = h;
+			document.getElementById('minute').innerText = m;
+			document.getElementById('second').innerText = s;
+
 			}
-		mob_slider_content.innerHTML = "<img class="+"mob_image"+" src="+mobimage[i-1]+".png>";
-	}
-	//prew image
-	function prewImage_mob1(){
-		if (i > mobimage.length+1 && i>1){
-			i = i-1;
-		}else{
-			i = mobimage.length;
-		}
-		mob_slider_content.innerHTML = "<img class="+"mob_image"+" src="+mobimage[i-1]+".png>";
-	}
+			setInterval(function(){
+				LaunchDate();
+			}, 1000)
 </script>
-</body>
 </html>
