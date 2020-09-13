@@ -15,7 +15,7 @@ body{
 	display: none;
 }
 
-.tab-nav{
+.mob_nav{
 	display: none;
 }
 
@@ -45,6 +45,7 @@ header{
 	justify-content: space-around;
 	font-size: 38px;
 	color: white;
+	font-family: 'Vollkorn', serif;
 }
 
 nav{
@@ -74,6 +75,7 @@ nav{
 	left: 0px;
 	height: 0px;
 	width: 100%;
+	z-index: 99990;
 	border-bottom: 1px solid #808080;
 }
 
@@ -108,7 +110,9 @@ footer{
 	font-family: 'Poppins', sans-serif;
 }
 
-
+.call_us{
+	display: none;
+}
 
 
 .loader_bg{
@@ -282,6 +286,7 @@ footer{
 	}
 
 	.menu-btn {
+		z-index: 9999;
 		position: absolute;
 		  top: 32px;
 		  display: block;
@@ -338,8 +343,72 @@ footer{
 		display: none;
 	}
 
+	.call_us{
+		position: absolute;
+		bottom: 0;
+		right: 20px;
+		height: 35px;
+		width: 160px;
+		background-color: #464646;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		border-radius: 20px 20px 0 0;
+	}
 
-	
+
+	.call_icon{
+		padding-left: 15px;
+		color: white;
+	}
+
+
+	.call_text{
+		padding-right: 20px;
+		color: white;
+		text-decoration: none;
+		font-family: 'Poppins', sans-serif;
+	}
+
+	.mob_nav{
+		display: none;
+	}
+
+	.mob_nav.open{
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background-color: #cecece;
+		z-index: 999;
+		transition: 0.7s ease;
+	}
+
+
+	.mob_nav_logo{
+		position: absolute;
+		top: 10px;
+		left: 4px;
+	}
+
+	.mob_nav_heading{
+		position: absolute;
+		top: 45px;
+   		left: 125px;
+		font-size: 18px;
+		font-family: 'Vollkorn', serif;
+
+	}
+
+
+	.mob_nav_ul{
+		display: flex;
+		flex-direction: row;
+	}
+
+
 
 
 }

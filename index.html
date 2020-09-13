@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
 	<div class="loader_bg">
@@ -31,26 +32,38 @@
 			</ul>
 		</nav>
 	</header>
+	<div class="mob_nav">
+ 		<img src="asset/black_logo.png" height="80px" width="80px" class="mob_nav_logo">
+ 		<div class="mob_nav_heading">Black Fox Entertaintment</div>
+	</div>
 	<div class="line"></div>
 		<div class="mail_us">
 			<div class="mail_icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
 			<div><a href="mailto:Business@blackfoxentertainment.in"  class="mail_text"> Mail Us</a></div>
 		</div>
 		<div class="call_us">
-			<div class="call_icon"></div>
-			<div><a href="tel:+919326582108"  class="call_text"> Mail Us</a></div>
+			<div class="call_icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+			<div><a href="tel:+919326582108" class="call_text"> Call Us</a></div>
 		</div>
 </body>
 <script type="text/javascript">
 	const menuBtn = document.querySelector('.menu-btn');
+	const mob_nav = document.querySelector('.mob_nav');
 	let menuOpen = false;
+	let mob_navOption = false;
 	menuBtn.addEventListener('click', () => {
 	  if(!menuOpen) {
 	    menuBtn.classList.add('open');
 	    menuOpen = true;
+	    mob_nav.classList.add('open');
+	    mob_navOption = true;
+
+
 	  } else {
 	    menuBtn.classList.remove('open');
 	    menuOpen = false;
+	    mob_nav.classList.remove('open');
+	    mob_navOption = false;
 	  }
 	});
 </script>
